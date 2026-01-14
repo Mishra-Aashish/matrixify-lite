@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f6fb;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 900px;
+  margin: 50px auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.upload-section {
+  padding: 20px;
+  border: 2px dashed #4f6ef7;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.upload-section input {
+  margin-top: 10px;
+}
+
+button {
+  background-color: #4f6ef7;
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #3f5ad6;
+}
+
+.table-preview {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.table-preview th,
+.table-preview td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.table-preview th {
+  background-color: #eef1ff;
+}
+
+.merge-info {
+  margin: 15px 0;
+  font-weight: bold;
+}
+
+.result-box {
+  background-color: #e8fff4;
+  padding: 15px;
+  margin-top: 20px;
+  border-left: 5px solid #2ecc71;
+  border-radius: 4px;
+}
+
+.error-box {
+  background-color: #ffeaea;
+  padding: 15px;
+  margin-top: 20px;
+  border-left: 5px solid #e74c3c;
+  border-radius: 4px;
+}
