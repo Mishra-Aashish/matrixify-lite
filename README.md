@@ -106,6 +106,24 @@ Main focus is on import logic, validation, and API integration.
 # Summary
 This project demonstrates basic understanding of Shopify product imports, merge update logic, and frontend-backend communication. The assignment focuses on correctness, simplicity, and clean flow rather than advanced features.
 
+## Workflow Screenshots
+
+### File Upload
+![File Upload](screenshots/upload.png)
+
+### CSV Preview
+![CSV Preview](screenshots/preview.png)
+
+### Import Result
+![Import Result](screenshots/result.png)
+
+## UI Screen 
+![UI Screen](screenshots/ui.png)
+
+### API Documentation
+![Swagger API](screenshots/swagger.png)
+
+
 # Future Improvements
 Database can be added later to store import results
 More import options can be supported in the future
