@@ -10,11 +10,19 @@ def merge_product(existing: dict, incoming: dict) -> dict:
         "handle",
     ]
 
+    if incoming is None:
+        raise ValueError("Incoming product data cannot be None")
+
     for field in fields:
         if incoming.get(field):
             merged[field] = incoming[field]
 
-    merged["id"] = existing["id"]
+    if existing and "id" in existing:
+     merged["id"] = existing["id"]
+     merged["action"] = "update"
+    else:
+        merged["action"] = "create"
+
     return merged
 
 
@@ -30,9 +38,16 @@ def merge_variant(existing: dict, incoming: dict) -> dict:
         "inventory_quantity",
     ]
 
+    if incoming is None:
+        raise ValueError("Incoming variant data cannot be None")
+
     for field in fields:
         if incoming.get(field) is not None:
             merged[field] = incoming[field]
 
-    merged["id"] = existing["id"]
+    if existing and "id" in existing:
+     merged["id"] = existing["id"]
+     merged["action"] = "update"
+    else:
+       merged["action"] = "create"
     return merged
