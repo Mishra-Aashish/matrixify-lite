@@ -26,6 +26,24 @@ Applies merge-only update logic
 Creates new products or variants if they do not exist
 Returns a summary of created and updated records
 
+## Unit Testing
+Basic unit tests were added to test the core merge logic used in this assignment.
+The tests check:
+Creating a product when it does not exist
+Updating a product when it already exists
+Handling create and update cases safely
+Tests are written using `pytest` and focus only on the assignment logic, not Shopify API calls.
+To run the tests:
+pytest
+
+## Exception Handling & Rollback
+Simple exception handling is added in the merge logic to avoid runtime errors when invalid data is received.
+For example, checks are added to ensure incoming product or variant data is not null and to safely handle create and update scenarios.
+
+# Rollback is not implemented in this assignment. It may be needed if product creation succeeds but variant creation fails.
+
+
+
 # Merge Logic
 Only fields present in the CSV are updated
 Existing Shopify data is not overwritten if the field is missing in CSV
